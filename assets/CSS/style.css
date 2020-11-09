@@ -46,3 +46,25 @@
 .finished {
     display: none;
 }
+
+.heading1 {
+  position:fixed;
+  top: 5px;
+  left: 10px;
+}
+
+.heading2 {
+    position: fixed;
+    top: 5px;
+    right: 10px;
+}
+
+header {
+    margin: 20px;
+    padding-bottom: 25px;
+}
+
+.quizBody {
+    display: flex;
+    justify-content: center;
+}
