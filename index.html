@@ -10,11 +10,11 @@
 <body>
     <header>
         <p class="heading1">View Highscores</p>
-        <p class="heading2">Time: <span>0</span></p>
+        <p class="heading2">Time: <span id="timeDis">0</span></p>
     </header>
 
    <div class="quizBody">
-    <div class="introPage">
+    <div id="introPage">
         <h1>
             Coding Quiz Challenge
         </h1>
@@ -23,25 +23,25 @@
             Blah blah blahhh bla. Just putting in some filler for info about the quiz. Dont know what im gonna put here later but I'll worry about that later.
         </p>
 
-        <button>
+        <button id="start">
             Start Quiz
         </button>
     </div>
 
-    <div class="question1">
+    <div id="question1">
         <h2>
            More than one instruction or command to be followed in order is a ______.
         </h2>
 
         <ul>
-            <li><button>Sequence</button></li>
-            <li><button>Algorithm</button></li>
-            <li><button>Bug</button></li>
-            <li><button>Command</button></li>
+            <li><button id="q1" class="q1buttons">Sequence</button></li>
+            <li><button class="q1buttons">Algorithm</button></li>
+            <li><button class="q1buttons">Bug</button></li>
+            <li><button class="q1buttons">Command</button></li>
         </ul>        
     </div>
 
-    <div class="question2">
+    <div id="question2">
         <h2>
            The action of doing something over and over again, repeating code, is called ________.
         </h2>
@@ -49,12 +49,12 @@
         <ul>
             <li><button>Code</button></li>
             <li><button>Program</button></li>
-            <li><button>Loop</button></li>
+            <li><button id="q2">Loop</button></li>
             <li><button>Bug</button></li>
         </ul>        
     </div>
 
-    <div class="question3">
+    <div id="question3">
         <h2>
            A person who writes code and communicates instructions to a computer is a _________.
         </h2>
@@ -62,38 +62,38 @@
         <ul>
             <li><button>Code</button></li>
             <li><button>Command</button></li>
-            <li><button>Programmer</button></li>
+            <li><button id="q3">Programmer</button></li>
             <li><button>Algorithm</button></li>
         </ul>        
     </div>
 
-    <div class="question4">
+    <div id="question4">
         <h2>
           A set of instructions that can be performed with or without a computer is a __________.
         </h2>
 
         <ul>
             <li><button>Bug</button></li>
-            <li><button>Algorithm</button></li>
+            <li><button id="q4">Algorithm</button></li>
             <li><button>Loop</button></li>
             <li><button>Debug</button></li>
         </ul>        
     </div>
 
-    <div class="question5">
+    <div id="question5">
         <h2>
            An algorithm that has been coded into something that can be run by a machine is a _________.
         </h2>
 
         <ul>
-            <li><button>Program</button></li>
+            <li><button id="q5">Program</button></li>
             <li><button>Sequence</button></li>
             <li><button>Code</button></li>
             <li><button>Algorithm</button></li>
         </ul>        
     </div>
 
-    <div class="question6">
+    <div id="question6">
         <h2>
             An error, or mistake, in a program that prevents the program from being run correctly is called a ________.
         </h2>
@@ -101,12 +101,12 @@
         <ul>
             <li><button>Program</button></li>
             <li><button>Loop</button></li>
-            <li><button>>Bug</button></li>
+            <li><button id="q6">Bug</button></li>
             <li><button>Code</button></li>
         </ul>        
     </div>
 
-    <div class="question7">
+    <div id="question7">
         <h2>
             One or more commands or algorithms designed to be carried out by a computer.
         </h2>
@@ -114,12 +114,12 @@
         <ul>
             <li><button>Code</button></li>
             <li><button>Loop</button></li>
-            <li><button>Program</button></li>
+            <li><button id=q7>Program</button></li>
             <li><button>Command</button></li>
         </ul>        
     </div>
 
-    <div class="question8">
+    <div id="question8">
         <h2>
             A single instruction for a computer is called a _______.
         </h2>
@@ -127,38 +127,38 @@
         <ul>
             <li><button>Loop</button></li>
             <li><button>Bug</button></li>
-            <li><button>Command</button></li>
+            <li><button id="q8">Command</button></li>
             <li><button>Code</button></li>
         </ul>        
     </div>
 
-    <div class="question9">
+    <div id="question9">
         <h2>
             Finding and Fixing errors or mistakes in programming is called __________.
         </h2>
 
         <ul>
-            <li><button>Debugging</button></li>
+            <li><button id="q9">Debugging</button></li>
             <li><button>Decomposing</button></li>
             <li<button>Sequencing</button></li>
             <li><button>Looping</button></li>
         </ul>        
     </div>
 
-    <div class="question10">
+    <div id="question10">
         <h2>
           _________ is planning a project by breaking a problem down into smaller pieces.
         </h2>
 
         <ul>
-            <li><button>Psudocoding</button></li>
+            <li><button id="q10">Psudocoding</button></li>
             <li><button>Debugging</button></li>
             <li><button>Programming</button></li>
             <li><button>Sequencing</button></li>
         </ul>        
     </div>
 
-    <div class="finished">
+    <div id="finished">
         <h2>
             All done!
         </h2>
@@ -174,6 +174,6 @@
         </form>
     </div>
    </div> 
-
+   <script src="assets/JavaScript/script.js"></script>
 </body>
 </html>   

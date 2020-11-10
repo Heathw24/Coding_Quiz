@@ -1,49 +1,49 @@
 
-.introPage {
+#introPage {
     display: block;
 }
 
-.question1 {
+#question1 {
     display: none;
 }
 
-.question2 {
+#question2 {
     display: none;
 }
 
-.question3 {
+#question3 {
     display: none;
 }
 
-.question4 {
+#question4 {
     display: none;
 }
 
-.question5 {
+#question5 {
     display: none;
 }
 
-.question6 {
+#question6 {
     display: none;
 }
 
-.question7 {
+#question7 {
     display: none;
 }
 
-.question8 {
+#question8 {
     display: none;
 }
 
-.question9 {
+#question9 {
     display: none;
 }
 
-.question10 {
+#question10 {
     display: none;
 }
 
-.finished {
+#finished {
     display: none;
 }
 
