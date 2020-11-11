@@ -253,7 +253,28 @@ q10But.forEach((btn) => {
     });
 });
 
+var submitEl = document.getElementById("submitButton");
 
+function saveScores(){
+  var initial = document.getElementById("initials").value;
+  event.preventDefault();
+  
+  if (initial==""){
+       alert("You need to fill in your Initials!");
+       return;
+   }
 
+  console.log(initial);
+  var highScore = [];
+  
 
+  const player = {
+      Initials: initial,
+      Score: score
+  };
+  highScore.push(player);
+ localStorage.setItem("highScore", JSON.stringify(highScore));
 
+}
+
+submitEl.onclick = saveScores;
