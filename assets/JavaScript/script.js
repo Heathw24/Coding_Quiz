@@ -28,8 +28,13 @@ var q10Page = document.getElementById("question10");
 var lastPage = document.getElementById("finished");
 var scoreEl = document.getElementById("totalScore");
 var highScorePage = document.getElementById("Highscores");
+var p1 = document.getElementById("1score");
+var p2 = document.getElementById("2score");
+var p3 = document.getElementById("3score");
+var p4 = document.getElementById("4score");
+var p5 = document.getElementById("5score");
 
-var time = 120;
+var time = 60;
 var score = 0;
 var timeTaken = 0;
 
@@ -82,8 +87,14 @@ hScorebtn.addEventListener("click", function(event) {
     q9Page.style.display = "none";
     q10Page.style.display = "none";
     lastPage.style.display = "none";
-    highScorePage.style.display ="block"
+    highScorePage.style.display ="block";
+
+    if (timeDisplay.innerHTML > 0) {
+        clearInterval(interval);
+      timeDisplay.innerHTML = 0;
+    }
     
+    displayHighScore()
 });
 
 
@@ -329,10 +340,18 @@ function displayHighScore() {
 
   var highScore = JSON.parse(test);
 
-  for (i=0; i>highScore.length;i++) {
-   var x = 0;
+  highScore.sort(function(a,b) {
+      return a.Score - b.Score;
+  });
 
+  
+   console.log(highScore);
+   
+   p1.innerHTML = JSON.stringify(highScore[highScore.length - 1]);
+   p2.innerHTML = JSON.stringify(highScore[highScore.length - 2]);
+   p3.innerHTML = JSON.stringify(highScore[highScore.length - 3]);
+   p4.innerHTML = JSON.stringify(highScore[highScore.length - 4]);
+   p5.innerHTML = JSON.stringify(highScore[highScore.length - 5]);
 
     
-  }
-}
+  };
