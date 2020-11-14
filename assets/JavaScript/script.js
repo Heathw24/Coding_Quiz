@@ -10,7 +10,8 @@ var q7But = document.querySelectorAll(".q7buttons");
 var q8But = document.querySelectorAll(".q8buttons");
 var q9But = document.querySelectorAll(".q9buttons");
 var q10But = document.querySelectorAll(".q10buttons");
-
+var finBut = document.querySelector("#finishedbtn");
+var hScorebtn = document.querySelector("#heading1");
 
 
 var startUpPage =document.getElementById("introPage");
@@ -26,6 +27,7 @@ var q9Page = document.getElementById("question9");
 var q10Page = document.getElementById("question10");
 var lastPage = document.getElementById("finished");
 var scoreEl = document.getElementById("totalScore");
+var highScorePage = document.getElementById("Highscores");
 
 var time = 120;
 var score = 0;
@@ -66,6 +68,23 @@ function endGame() {
     return;
 
 }
+
+hScorebtn.addEventListener("click", function(event) {
+    startUpPage.style.display = "none";
+    q1Page.style.display = "none";
+    q2Page.style.display = "none";
+    q3Page.style.display = "none";
+    q4Page.style.display = "none";
+    q5Page.style.display = "none";
+    q6Page.style.display = "none";
+    q7Page.style.display = "none";
+    q8Page.style.display = "none";
+    q9Page.style.display = "none";
+    q10Page.style.display = "none";
+    lastPage.style.display = "none";
+    highScorePage.style.display ="block"
+    
+});
 
 
 
@@ -265,16 +284,55 @@ function saveScores(){
    }
 
   console.log(initial);
-  var highScore = [];
+ 
+  var test = localStorage.getItem("highScore");
+  console.log(test);
+
+  var highScore = JSON.parse(test);
+
+  console.log(highScore);
   
 
   const player = {
       Initials: initial,
       Score: score
   };
+
   highScore.push(player);
  localStorage.setItem("highScore", JSON.stringify(highScore));
 
+ lastPage.style.display = "none";
+ highScorePage.style.display = "block";
 }
 
 submitEl.onclick = saveScores;
+finBut.addEventListener("click", function() {
+
+    startUpPage.style.display = "block";
+    q1Page.style.display = "none";
+    q2Page.style.display = "none";
+    q3Page.style.display = "none";
+    q4Page.style.display = "none";
+    q5Page.style.display = "none";
+    q6Page.style.display = "none";
+    q7Page.style.display = "none";
+    q8Page.style.display = "none";
+    q9Page.style.display = "none";
+    q10Page.style.display = "none";
+    lastPage.style.display = "none";
+    highScorePage.style.display ="none"
+});
+
+function displayHighScore() {
+    var test = localStorage.getItem("highScore");
+  console.log(test);
+
+  var highScore = JSON.parse(test);
+
+  for (i=0; i>highScore.length;i++) {
+   var x = 0;
+
+
+    
+  }
+}
